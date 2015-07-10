@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		28FD14FE0DC6FC130079059D /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD14FD0DC6FC130079059D /* EAGLView.m */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		37EC4BF21B4FD89500DF7393 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37EC4BF11B4FD89500DF7393 /* Default-568h@2x.png */; };
 		5FA95D9B0ED376D100097822 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FA95D9A0ED376D100097822 /* menu.png */; };
 		5FF228FE0EC76772003446C6 /* dist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FF228FD0EC76772003446C6 /* dist.plist */; };
 		726057520EC6638A00F686DE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 726057510EC6638A00F686DE /* Icon.png */; };
@@ -97,6 +98,7 @@
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* iPhone_Quake_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_Quake_Prefix.pch; sourceTree = "<group>"; };
+		37EC4BF11B4FD89500DF7393 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5FA95D9A0ED376D100097822 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		5FF228FD0EC76772003446C6 /* dist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dist.plist; sourceTree = "<group>"; };
 		721ACC8A0ECA637700647595 /* pak1.pak */ = {isa = PBXFileReference; lastKnownFileType = file; path = pak1.pak; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				37EC4BF11B4FD89500DF7393 /* Default-568h@2x.png */,
 				728350220EAA3D5F0057319D /* ID1 */,
 				72898E460EA75842002742C7 /* Quake Source */,
 				728B458E0EA5642900FE6DB7 /* Software Renderer */,
@@ -537,9 +540,16 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPhone Quake" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -559,6 +569,7 @@
 				728350250EAA3D610057319D /* config.cfg in Resources */,
 				728350E50EAA4EF40057319D /* pak0.pak in Resources */,
 				726057520EC6638A00F686DE /* Icon.png in Resources */,
+				37EC4BF21B4FD89500DF7393 /* Default-568h@2x.png in Resources */,
 				5FF228FE0EC76772003446C6 /* dist.plist in Resources */,
 				5FA95D9B0ED376D100097822 /* menu.png in Resources */,
 			);
@@ -648,6 +659,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iPhone_Quake_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tmsoft.quake;
 				PRODUCT_NAME = "iPhone Quake";
 			};
 			name = Debug;
@@ -660,6 +672,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iPhone_Quake_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tmsoft.quake;
 				PRODUCT_NAME = "iPhone Quake";
 			};
 			name = Release;
@@ -667,7 +680,6 @@
 		5FF228FB0EC76750003446C6 /* Beta Tester */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = dist.plist;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: TODD Moore";
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -679,7 +691,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "19C1B5D0-ABD7-4702-807B-4CA2C0DB6FDB";
-				SDKROOT = iphoneos2.0;
+				SDKROOT = iphoneos;
 			};
 			name = "Beta Tester";
 		};
@@ -692,6 +704,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iPhone_Quake_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tmsoft.quake;
 				PRODUCT_NAME = "iPhone Quake";
 			};
 			name = "Beta Tester";
@@ -699,8 +712,8 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					ESQUAKE,
@@ -710,14 +723,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos2.0;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -727,7 +739,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos2.0;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
