@@ -6,7 +6,7 @@
  
  This program is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  
  See the GNU General Public License for more details.
  
@@ -15,19 +15,16 @@
  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  
  */
-/*
- *  r_part.h
- *  iPhone Quake
- *
- *  Kevin Arunski, October 2008
- *
- */
+//
+//  gl_warp.h
+//  iPhone Quake
+//
+//  Created by Jeremiah Dabney on 7/10/15.
+//
+//
 
-#ifndef R_PART_H
-#define R_PART_H
+#ifndef gl_warp_h
+#define gl_warp_h
 
-void R_ClearParticles (void);
-void R_DrawParticles (void);
-void R_InitParticles (void);
-
-#endif
+void GL_SubdivideSurface (msurface_t *fa);
+#endif /* gl_warp_h */

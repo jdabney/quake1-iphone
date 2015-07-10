@@ -23,6 +23,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include "quakedef.h"
 #include "vid.h"
+#include "gl_draw.h"
 
 #define GL_COLOR_INDEX8_EXT     0x80E5
 

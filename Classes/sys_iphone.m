@@ -46,7 +46,7 @@ void Sys_Error (char *error, ...)
 {
 	va_list         argptr;
 	va_start (argptr,error);
-	[NSException raise:@"Sys_Error" format:[NSString stringWithCString:error] arguments:argptr];
+	[NSException raise:@"Sys_Error" format:[NSString stringWithUTF8String:error] arguments:argptr];
 	va_end (argptr);
 	
 	// default implementation called exit(int) here. Instead, I throw an exception
@@ -57,7 +57,7 @@ const char * requestPathToRealPath(const char * requestPath)
 {
 	// substitute the game directory for the bundle directory
 	NSString * bundlePath = [[NSBundle mainBundle] bundlePath];
-	return [[bundlePath stringByAppendingPathComponent:[[NSString stringWithCString:requestPath] lastPathComponent]] UTF8String];
+	return [[bundlePath stringByAppendingPathComponent:[[NSString stringWithUTF8String:requestPath] lastPathComponent]] UTF8String];
 }
 
 const char * requestPathToWritablePath(const char * requestPath)
@@ -66,11 +66,11 @@ const char * requestPathToWritablePath(const char * requestPath)
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	
 	// substitute the game directory for the bundle directory
-	NSArray * requestPathComponents = [[NSString stringWithCString:requestPath] pathComponents];
+	NSArray * requestPathComponents = [[NSString stringWithUTF8String:requestPath] pathComponents];
 	NSUInteger i = 0;
 	for (i = 0; i < [requestPathComponents count]; i += 1)
 	{
-		if ([[requestPathComponents objectAtIndex:i] isEqualToString:[[NSString stringWithCString:com_gamedir] lastPathComponent]])
+		if ([[requestPathComponents objectAtIndex:i] isEqualToString:[[NSString stringWithUTF8String:com_gamedir] lastPathComponent]])
 		{
 			break;
 		}

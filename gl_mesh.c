@@ -201,13 +201,13 @@ void BuildTris (void)
 {
 	int		i, j, k;
 	int		startv;
-	mtriangle_t	*last, *check;
-	int		m1, m2;
-	int		striplength;
-	trivertx_t	*v;
-	mtriangle_t *tv;
+	//mtriangle_t	*last, *check;
+	//int		m1, m2;
+	//int		striplength;
+	//trivertx_t	*v;
+	//mtriangle_t *tv;
 	float	s, t;
-	int		index;
+	//int		index;
 	int		len, bestlen, besttype;
 	int		bestverts[1024];
 	int		besttris[1024];
