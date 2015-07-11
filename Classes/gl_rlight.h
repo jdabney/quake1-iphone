@@ -16,17 +16,15 @@
  
  */
 //
-//  gl_rsurf.h
+//  gl_rlight.h
 //  iPhone Quake
 //
-//  Created by Jeremiah Dabney on 7/10/15.
+//  Created by Jeremiah Dabney on 7/11/15.
 //
 //
 
-#ifndef gl_rsurf_h
-#define gl_rsurf_h
+#ifndef gl_rlight_h
+#define gl_rlight_h
 
-void GL_BuildLightmaps (void);
-void R_DrawWaterSurfaces (void);
-void R_RenderBrushPoly (msurface_t *fa);
-#endif /* gl_rsurf_h */
+void R_AnimateLight (void);
+#endif /* gl_rlight_h */

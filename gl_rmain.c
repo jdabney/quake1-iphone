@@ -28,6 +28,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include "r_surf.h"
 #include "r_part.h"
 #include "r_light.h"
+#include "r_local.h"
+#include "gl_rlight.h"
+#include "gl_rsurf.h"
 
 entity_t	r_worldentity;
 
@@ -1047,9 +1050,9 @@ R_SetupFrame
 */
 void R_SetupFrame (void)
 {
-	int				edgecount;
-	vrect_t			vrect;
-	float			w, h;
+//	int				edgecount;
+//	vrect_t			vrect;
+//	float			w, h;
 
 // don't allow cheats in multiplayer
 	if (cl.maxclients > 1)
@@ -1393,7 +1396,7 @@ r_refdef must be set before the first call
 void R_RenderView (void)
 {
 	double	time1, time2;
-	GLfloat colors[4] = {(GLfloat) 0.0, (GLfloat) 0.0, (GLfloat) 1, (GLfloat) 0.20};
+	//GLfloat colors[4] = {(GLfloat) 0.0, (GLfloat) 0.0, (GLfloat) 1, (GLfloat) 0.20};
 
 	if (r_norefresh.value)
 		return;

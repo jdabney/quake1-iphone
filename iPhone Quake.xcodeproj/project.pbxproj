@@ -102,6 +102,7 @@
 		37EC4BF31B4FE3AB00DF7393 /* gl_rsurf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gl_rsurf.h; sourceTree = "<group>"; };
 		37EC4BF41B4FE42C00DF7393 /* gl_warp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gl_warp.h; sourceTree = "<group>"; };
 		37EC4BF51B4FE4A100DF7393 /* gl_mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gl_mesh.h; sourceTree = "<group>"; };
+		37EC4BF61B512F2F00DF7393 /* gl_rlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gl_rlight.h; sourceTree = "<group>"; };
 		5FA95D9A0ED376D100097822 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		5FF228FD0EC76772003446C6 /* dist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dist.plist; sourceTree = "<group>"; };
 		721ACC8A0ECA637700647595 /* pak1.pak */ = {isa = PBXFileReference; lastKnownFileType = file; path = pak1.pak; sourceTree = "<group>"; };
@@ -293,6 +294,7 @@
 				72E0A8C20EABB8DB00E6EEA1 /* r_light.h */,
 				72D9CD6C0EAD22B000942E86 /* gl_draw.h */,
 				37EC4BF51B4FE4A100DF7393 /* gl_mesh.h */,
+				37EC4BF61B512F2F00DF7393 /* gl_rlight.h */,
 				37EC4BF31B4FE3AB00DF7393 /* gl_rsurf.h */,
 				37EC4BF41B4FE42C00DF7393 /* gl_warp.h */,
 				726058290EC6813B00F686DE /* net_udp_iphone.m */,
@@ -695,6 +697,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GLQUAKE = YES;
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "19C1B5D0-ABD7-4702-807B-4CA2C0DB6FDB";
 				SDKROOT = iphoneos;
@@ -727,6 +730,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GLQUAKE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
@@ -744,6 +748,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GLQUAKE = YES;
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
