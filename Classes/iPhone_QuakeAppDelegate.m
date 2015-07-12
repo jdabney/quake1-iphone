@@ -91,7 +91,8 @@ static quakeparms_t    parms;
 	// must tell status bar our orientation so keyboard displays in landscape mode
 	[application setStatusBarOrientation: UIInterfaceOrientationLandscapeRight animated: NO];
 	
-	
+	window.rootViewController = [[UIViewController alloc] init];  // MAKE ONE
+	window.rootViewController.view = glView; // MUST SET THIS UP OTHE
 	@try
 	{
 		Host_Init (&parms);
