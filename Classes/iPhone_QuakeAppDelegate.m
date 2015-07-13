@@ -45,7 +45,8 @@ static quakeparms_t    parms;
 							delegate:self
 							cancelButtonTitle:@"Exit"
 							otherButtonTitles:nil];
-	return self;
+	
+	 return self;
 }
 
 -(void)showWithTitle: (NSString *)title message:(NSString *)message
@@ -89,10 +90,13 @@ static quakeparms_t    parms;
 	parms.argv = com_argv;
 
 	// must tell status bar our orientation so keyboard displays in landscape mode
-	[application setStatusBarOrientation: UIInterfaceOrientationLandscapeRight animated: NO];
+	//[application setStatusBarOrientation: UIInterfaceOrientationLandscapeRight animated: NO];
 	
 	window.rootViewController = [[UIViewController alloc] init];  // MAKE ONE
-	window.rootViewController.view = glView; // MUST SET THIS UP OTHE
+	window.rootViewController.view = glView; // MUST SET THIS UP OTHER
+	
+	glView.transform = CGAffineTransformMakeRotation(-M_PI_2);
+	
 	@try
 	{
 		Host_Init (&parms);
@@ -111,7 +115,15 @@ static quakeparms_t    parms;
 }
 
 
-- (void)applicationWillResignActive:(UIApplication *)application 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+}
+
+- (NSUInteger)supportedInterfaceOrientations{
+	return UIInterfaceOrientationMaskLandscapeRight;
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application
 {
 	glView.animationInterval = 1.0 / 5.0;
 }

@@ -36,8 +36,8 @@
 
 // Because I'm lazy I'm assuming every device ever made will have a 480 x 320 screen.
 // -KJA
-#define WIDTH 480
-#define HEIGHT 320
+#define WIDTH 667
+#define HEIGHT 375
 #define USE_DEPTH_BUFFER 1
 #define degreesToRadian(x) (M_PI * x / 180.0)
 
